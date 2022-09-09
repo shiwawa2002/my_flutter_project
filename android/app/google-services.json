@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "832002469712",
+    "project_id": "my-little-pony-flutter",
+    "storage_bucket": "my-little-pony-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832002469712:android:545ab7db46baaf21f78655",
+        "android_client_info": {
+          "package_name": "com.example.my_little_pony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832002469712-hb50f0dqge7nlcfv0v4nvf7g088bhhkj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.my_little_pony",
+            "certificate_hash": "59ceeec0cabb6f9adfe8695ad066f6f9c5f2a526"
+          }
+        },
+        {
+          "client_id": "832002469712-q29i6guucmsbp3p09i7r52daf7kka6n6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuHQIM1l2yUIxamCpVHeZ6AU3-A8ZlZws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832002469712-q29i6guucmsbp3p09i7r52daf7kka6n6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
