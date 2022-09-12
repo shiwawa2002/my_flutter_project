@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "832002469712",
+    "firebase_url": "https://my-little-pony-flutter-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "my-little-pony-flutter",
     "storage_bucket": "my-little-pony-flutter.appspot.com"
   },
