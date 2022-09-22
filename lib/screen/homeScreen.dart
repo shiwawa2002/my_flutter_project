@@ -6,6 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_little_pony/screen/signInScreen.dart';
 
 import '../bloc/auth/auth_bloc.dart';
+import '../data/repository/authRepository.dart';
+import 'dashBoardScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,6 +15,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
+    // return BlocProvider(
+    //   create: (BuildContext context) => AuthBloc(
+    //       authRepository: RepositoryProvider.of<AuthRepository>(context)),
+    //   child: MaterialApp(
+    //     home: BlocBuilder<AuthBloc, AuthState>(
+    //       builder: (context, state) {
+    //         if (state is UnAuthenticated) {
+    //           return SignInScreen();
+    //         }
+    //         if (state is Authenticated) {
+    //           return DashBoardScreen(
+    //               displayName: state.displayName,
+    //               email: state.email,
+    //               photoURL: state.photoURL);
+    //         }
+    //         return Container();
+    //       },
+    //     ),
+    //   ),
+    // );
     return Scaffold(
       appBar: AppBar(
         title: const Text('HomeScreen'),
@@ -22,9 +44,19 @@ class HomeScreen extends StatelessWidget {
           if (state is UnAuthenticated) {
             Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(builder: (context) => SignInScreen()),
-                  (route) => false,
+              (route) => false,
             );
           }
+          // if (state is Authenticated) {
+          //   Navigator.of(context).pushAndRemoveUntil(
+          //     MaterialPageRoute(
+          //         builder: (context) => DashBoardScreen(
+          //             displayName: state.displayName,
+          //             email: state.email,
+          //             photoURL: state.photoURL)),
+          //     (route) => false,
+          //   );
+          // }
         },
         child: Center(
           child: Column(
